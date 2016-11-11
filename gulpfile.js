@@ -34,7 +34,7 @@ gulp.task('styles', function() {
                 'opera 12'
             ]
         }))
-        .pipe(cssNano())
+        .pipe(cssNano()).pipe(concat("main.css"))
         .pipe(sourcemaps.write('sourcemaps'))
         .pipe(gulp.dest(paths.dist + 'styles'))
         .pipe( connect.reload() );

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Virtual stadium by DataMiners</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, print"/>
+    <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+</head>
+<body>
+<img class="logo-big">
+<div class="stream-container">
+    <div class="full-wrapper">
+
+    </div>
+</div>
+
+<div id="screenShots"></div>
+<div class="side-container"></div>
+<video id="video" class="video-js vjs-default-skin"
+       controls preload="auto" width="640" height="264"
+       data-setup='{"example_option":true}' autoplay="true">
+    <source src="images/sample-video.mp4">
+</video>
+<div class="edit-container">
+    <video id="edit-video-content">
+        <source src="images/sample-video.mp4">
+    </video>
+    <video id="edit-video-camera">
+        <source src="images/sample-camera.mp4">
+    </video>
+    <div id='edit-controls'>
+        <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+        <input type="range" id="seek-bar" value="0">
+        <input type="range" id="seek-bar2" value="0">
+        <div id="slider"></div>
+        <button id="generate">asdasd</button>
+    </div>
+</div>
+<script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+    // initialize video.js on a video
+    var video = videojs('video');
+    video.html5Thumbnails({id:'video', autoPlay: true});
+</script>
+
+<script>
+ initSlider()
+
+</script>
+
+</body>
+</html>
