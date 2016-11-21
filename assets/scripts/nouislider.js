@@ -800,7 +800,8 @@
 				valueVertical: 'value-vertical',
 				valueNormal: 'value-normal',
 				valueLarge: 'value-large',
-				valueSub: 'value-sub'
+				valueSub: 'value-sub',
+				test:'test'
 			},
 			'useRequestAnimationFrame': true
 		};
@@ -867,7 +868,7 @@ function closure ( target, options, originalOptions ){
 		if ( !add ) {
 			return false;
 		}
-
+		addNodeTo(base, options.cssClasses.test);
 		return addNodeTo(base, options.cssClasses.connect);
 	}
 

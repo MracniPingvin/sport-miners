@@ -15,7 +15,7 @@
     };
 
     var methods = ( "byId forEach extend effects error guid sizeOf isArray nop position disable enable destroy" +
-          "addTrackEvent removeTrackEvent getTrackEvents getTrackEvent getLastTrackEventId " +
+          "addTrackEvent removeTrackEvent gFpetTrackEvents getTrackEvent getLastTrackEventId " +
           "timeUpdate plugin removePlugin compose effect xhr getJSONP getScript" ).split(/\s+/);
 
     while ( methods.length ) {

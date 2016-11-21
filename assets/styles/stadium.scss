@@ -1,34 +1,100 @@
-.stream-container{
-  width: 75vw;
-  position: relative;
-  video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-}
-.full-wrapper{
+.full-span{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+.stream-container{
+  width: 75vw;
+  position: relative;
+
+  #video{
+    @extend .full-span;
+  }
+}
+.full-wrapper{
+  @extend .full-span;
+  position: relative;
+  padding-top: 56.25%;
+  #video{
+    @extend .full-span;
+  }
+}
 .vjs-thumbnail-holder{
   top: 50px;
   display: block !important;
 }
 .edit-container{
-  width: 1000px;
-  height: 400px;
+  display: none;
+  width: 605px;
+  height: 230px;
+  background-color: rgba(33,33,33,0.6);
+  position: absolute;
+  bottom: -160px;
+  left: 0px;
+  padding: 0 50px;
+  .edit-video-wrapper{
+    font-size: 0;
+    height: 140.6px;
+    position: relative;
+  }
   video{
-    width: 400px;
+    &:first-child{
+      float: left;
+    }
+    &:last-child{
+      float: right;
+    }
+    position: relative;
+    height: auto;
+    width: 49.5%;
     display: inline-block;
   }
 }
 #edit-controls{
+  margin-top: 8px;
+  .edit-button{
+    position: absolute;
+    width: 31px;
+    height: 31px;
+  }
+  #generate{
+    right: -41px;
+  }
+  #cancel{
+    left: -41px;
+  }
   input{
     position: absolute;
   }
+}
+.created-gif{
+  width: 400px;
+  display: inline-block;
+}
+.marker{
+  position: absolute;
+  height: 100%;
+  width: auto;
+}
+.marker-left{
+  left:17px;
+}
+.marker-right{
+  right: 17px;
+}
+.marker-now{
+  left: 16px;
+}
+.noUi-test{
+  height: 100%;
+  position: absolute;
+  width: 2px;
+  background-color: red;
+}
+.clock-box{
+  height: 22px;
+  width: 65px;
+  background-color: black;
 }

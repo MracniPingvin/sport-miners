@@ -1,6 +1,7 @@
 /**
 * register the html5Thumbnails plugin
 */
+
 var editStart;
 (function(){
 	var defaults = {}, extend;
@@ -181,16 +182,17 @@ var editStart;
 			if(settings.autoPlay){
 				video.pause(); //make sure the video doesn't continue downloading on mouse out.
 			}
-			/*hideInterval = setInterval(function(){
+			hideInterval = setInterval(function(){
 				if(div.style.opacity <= 0){
 					div.style.display = "none";
 					loader.style.display = "none";
 					clearInterval(hideInterval);
 				}
 				div.style.opacity = +(div.style.opacity)-0.02;
-			}, 10);*/
+			}, 10);
 		}, false);
 		progressControl.el()[eventHandler]('click', function click(){
+			$(".edit-container").css("display","block");
 			clearInterval(hideInterval);
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();
 			var w = boundingClientRect.width;
@@ -198,19 +200,7 @@ var editStart;
 			//var x = event.offsetX;
 			var percentX = x / w;
 			editStart=percentX;
-			initSlider(percentX, 0.1)
-			gifshot.createGIF({
-				'video': ["images/sample-video.mp4"+"#t="+(full_duration*percentX)],
-				'gifWidth': 200,
-				'gifHeight': 200,
-			},function(obj) {
-				if(!obj.error) {
-					var image = obj.image,
-						animatedImage = document.createElement('img');
-					animatedImage.src = image;
-					document.body.appendChild(animatedImage);
-				}
-			});
+			initSlider(percentX, 0.1);
 		}, false);
 	});
 })();

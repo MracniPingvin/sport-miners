@@ -4,6 +4,7 @@ myVideoPlayer.addEventListener('durationchange', function() {
     full_duration = myVideoPlayer.duration;
 });
 var editVideo = document.getElementById('edit-video-content')
+
 var videos = {
         a: Popcorn("#edit-video-content"),
         b: Popcorn("#edit-video-camera"),
@@ -84,18 +85,34 @@ function sync() {
 sync();
 
 
-function updateProgressBar() {
-    var progressBar = document.getElementById('progress-bar');
-    var percentage = Math.floor((100 / editVideo.duration) *
-        editVideo.currentTime);
-    progressBar.value = percentage;
-    progressBar.innerHTML = percentage + '% played';
-}
+/*function updateProgressBar() {
+ var progressBar = document.getElementById('progress-bar');
+ var percentage = Math.floor((100 / editVideo.duration) *
+ editVideo.currentTime);
+ progressBar.value = percentage;
+ progressBar.innerHTML = percentage + '% played';
+ }
 editVideo.addEventListener('timeupdate', updateProgressBar, false);
-
+ */
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutationRecord) {
         console.log('style changed!');
     });
 });
 
+function make_gif(start, lenght, file){
+ gifshot.createGIF({
+     'video': ["images/"+ file + "#t=" +(start)],
+     'gifWidth': parseInt(400*1.7777777),
+     'gifHeight': 200,
+     'numFrames': parseInt(10*lenght),
+ },function(obj) {
+     if(!obj.error) {
+         var image = obj.image,
+             animatedImage = document.createElement('img');
+         animatedImage.src = image;
+         animatedImage.className = "created-gif";
+         document.body.appendChild(animatedImage);
+     }
+ });
+}
