@@ -42,8 +42,8 @@ var editStart;
 		var h = player.height();
 
 		//calculate the thumbnail width and height
-		div.height = (h * scaleFactor > 32 ? h * scaleFactor : 32);
-		div.width = (w * scaleFactor > 32 ? w * scaleFactor : 32);
+		div.height = 0;
+		div.width = 0;
 		
 		//set the thumbnail container width and height
 		div.style.width = div.width;
@@ -131,17 +131,18 @@ var editStart;
 		progressControl.el()[eventHandler]('mouseover', function mouseover(event) {
 			clearInterval(hideInterval);
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();
-			var w = boundingClientRect.width;
+			var w = boundingClientRect.width-162;
 
 			showThumb(div, loader);
-
+			$(".edit-container").css("display","block");
 			if(settings.autoPlay){
-				video.play(); //make sure the video doesn't continue downloading on mouse out.
+				//make sure the video doesn't continue downloading on mouse out.
 			}
  
- 			var x = event.clientX - boundingClientRect.left;
-			var percentX = x / w;
+ 			var x = event.clientX - boundingClientRect.left - 85;
 
+			var percentX = x / w;
+			console.log(w);
 			if(timeout){
 				clearTimeout(timeout);
 			}
@@ -153,12 +154,12 @@ var editStart;
 		progressControl.el()[eventHandler]('mousemove', function mousemove(event) {
 			clearInterval(hideInterval);
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();
-			var w = boundingClientRect.width;
-			var x = event.clientX - boundingClientRect.left;
+			var w = boundingClientRect.width-162;
+			var x = event.clientX - boundingClientRect.left - 85;
 			//var x = event.offsetX;
 			var percentX = x / w;
 			showThumb(div, loader);
-
+			$(".edit-container").css("left",x);
 			if(x + (div.width / 2) > w){
 				div.style.left = w - div.width;
 			}else{
@@ -173,7 +174,7 @@ var editStart;
 				clearTimeout(timeout);
 			}
 			timeout = setTimeout(function(){
-				video.currentTime = parseInt(player.duration() * percentX);
+				editVideo.currentTime = parseInt(full_duration * percentX);
 			}, 25);
 		}, false);
 
@@ -182,6 +183,7 @@ var editStart;
 			if(settings.autoPlay){
 				video.pause(); //make sure the video doesn't continue downloading on mouse out.
 			}
+			$(".edit-container").css("display","none");
 			hideInterval = setInterval(function(){
 				if(div.style.opacity <= 0){
 					div.style.display = "none";
@@ -192,11 +194,10 @@ var editStart;
 			}, 10);
 		}, false);
 		progressControl.el()[eventHandler]('click', function click(){
-			$(".edit-container").css("display","block");
-			clearInterval(hideInterval);
+			$("#edit-controls").css("display","block");
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();
-			var w = boundingClientRect.width;
-			var x = event.clientX - boundingClientRect.left;
+			var w = boundingClientRect.width-162;
+			var x = event.clientX - boundingClientRect.left - 85;
 			//var x = event.offsetX;
 			var percentX = x / w;
 			editStart=percentX;

@@ -1,3 +1,4 @@
+
 html, body{
   margin: 0;
   padding: 0;
@@ -9,6 +10,17 @@ body{
   background-image: url("../images/background.jpg");
   background-position: center;
   background-size: cover;
+}
+input, textarea{
+  background-color: transparent;
+  border: 0;
+  &:focus{
+    border: 0;
+    outline: 0;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .v-center{
   position: absolute;

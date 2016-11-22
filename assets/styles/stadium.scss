@@ -27,12 +27,11 @@
 }
 .edit-container{
   display: none;
-  width: 605px;
+  width: 200px;
   height: 230px;
   position: absolute;
   bottom: -160px;
-  left: 0px;
-  padding: 0 50px;
+  padding: 0 10px;
   .edit-video-wrapper{
     font-size: 0;
     height: 140.6px;
@@ -52,6 +51,7 @@
   }
 }
 #edit-controls{
+  display: none;
   margin-top: 8px;
   .edit-button{
     position: absolute;
@@ -111,7 +111,7 @@
   right: 0;
   top: 0;
 }
-.stadium-container{
+.stadium-container, .chat-container{
   padding: 8px 8px 8px 8px;
   font-size: 10px;
   .row{
@@ -177,9 +177,6 @@
   background-color: rgba(33,33,33,0.6);
 }
 .vs-bar{
-  padding-bottom: 5px !important;
-  margin-bottom: 10px !important;
-  border-bottom: solid 0.8px #f4f4f2;
   div{
     position: relative;
   }
@@ -193,7 +190,11 @@
     transform: translateX(50%);
   }
 }
-
+.top-bar{
+  border-bottom: solid 0.8px #f4f4f2;
+  padding-bottom: 5px !important;
+  margin-bottom: 10px !important;
+}
 .progress {
   height: 100%;
   width: 40px;
@@ -215,5 +216,74 @@
     width:100%;
     font-size: 6px;
     color: white;
+  }
+}
+.chat-container{
+  margin-top: 5px;
+  border-radius: 4px;
+  .chat-main{
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .chat-wrapper{
+    font-size: 7px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .stadium-profile{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .message-name, .message-content{
+    margin-left: 30px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .message-name{
+    color: #6b6b6b;
+  }
+  .message-content{
+    padding: 5px;
+    margin-bottom: 5px;
+    max-width: 150px;
+    background-color: #393939;
+    color: white;
+    border-radius: 3px;
+  }
+}
+.chat-input{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  .wrapper{
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #393939;
+  }
+  textarea{
+    width: 80%;
+    resize: none;
+    font-size: 7px;
+    color: white;
+  }
+}
+.chat-button{
+  padding: 0 6px;
+  height: 11px;
+  line-height: 11px;
+  border-radius: 6px;
+  background-color: #171616;
+  color: #bdbdbd;
+  font-size: 8.5px;
+  &.active{
+    background-color: #bdbdbd;
+    color: #171616;
   }
 }
