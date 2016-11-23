@@ -61,6 +61,13 @@ function initSlider(start, area) {
 $("#generate").click(function () {
     make_gif(selection_start, selection_end-selection_start, "joined-video.mp4");
 });
+$("#cancel").click(function () {
+    editMode=false;
+    $(".edit-container").css("display","none");
+    $("#slider").remove();
+    $(".edit-controls").css("display","none");
+    $("#edit-controls").prepend('<div id="slider"><div id="generate" class="edit-button v-center" ><img src="images/generate.png" ></div> <div id="cancel" class="edit-button v-center"><img src="images/cancel.png"></div></div>');
+});
 $("#sync").click(function () {
     $('.created-gif').gifplayer();
 });

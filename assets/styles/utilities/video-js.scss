@@ -1231,3 +1231,16 @@ video::-webkit-media-text-track-display {
   line-height: 1.5;
   padding: 20px 24px;
   z-index: 1; }
+.vjs-volume-menu-button{
+  position: absolute !important;
+  right: 48px;
+}
+.vjs-remaining-time{
+  display: none;
+}
+.vjs-control-bar{
+  padding: 0 20px;
+}
+.vjs-fullscreen-control{
+  margin-left: 27px !important;
+}

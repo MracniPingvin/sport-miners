@@ -12,33 +12,36 @@
     <div class="full-wrapper">
         <video id="video" class="video-js vjs-default-skin"
                controls preload="auto" width="640" height="264"
-               data-setup='{"example_option":true}' autoplay="true" muted="true">
+               autoplay="true" muted="true">
             <source src="images/sample-video.mp4">
         </video>
-    </div>
-    <div class="edit-container grey-bg">
-        <div class="edit-video-wrapper">
-            <video id="edit-video-content"> 
-                <source src="images/sample-video.mp4">
-            </video>
-            <video id="edit-video-camera">
-                <source src="images/sample-camera.mp4">
-            </video>
-        </div>
-        <div id='edit-controls'>
-            <div id="slider">
-                <div id="generate" class="edit-button v-center" >
-                    <img src="images/generate.png" >
+        <div class="edit-placeholder">
+            <div class="edit-container grey-bg" id="edit-container">
+                <div class="edit-video-wrapper">
+                    <video id="edit-video-content" muted>
+                        <source src="images/sample-video.mp4">
+                    </video>
+                    <video id="edit-video-camera" muted>
+                        <source src="images/sample-camera.mp4">
+                    </video>
                 </div>
-                <div id="cancel" class="edit-button v-center">
-                    <img src="images/cancel.png">
+                <div id='edit-controls'>
+                    <div id="slider">
+                        <div id="generate" class="edit-button v-center" >
+                            <img src="images/generate.png" >
+                        </div>
+                        <div id="cancel" class="edit-button v-center">
+                            <img src="images/cancel.png">
+                        </div>
+                    </div>
+                    <div class="clock-box">
+                        00:00
+                    </div>
                 </div>
             </div>
-            <div class="clock-box">
-                00:00
-            </div>
         </div>
     </div>
+
 </div>
 <div class="side-container">
     <div class="stadium-container grey-bg">
@@ -135,7 +138,7 @@
 <script src="scripts/main.js"></script>
 <script>
     // initialize k-video.js on a video
-    var video = videojs('video');
+    var video = videojs('video',{ "controls": true, "preload": "auto" });
     video.html5Thumbnails({id:'video', autoPlay: true});
 </script>
 

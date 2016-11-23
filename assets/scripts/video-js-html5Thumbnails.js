@@ -142,7 +142,7 @@ var editStart;
  			var x = event.clientX - boundingClientRect.left - 85;
 
 			var percentX = x / w;
-			console.log(w);
+
 			if(timeout){
 				clearTimeout(timeout);
 			}
@@ -159,16 +159,13 @@ var editStart;
 			//var x = event.offsetX;
 			var percentX = x / w;
 			showThumb(div, loader);
-			$(".edit-container").css("left",x);
-			if(x + (div.width / 2) > w){
-				div.style.left = w - div.width;
-			}else{
-				if(x - (div.width / 2) < 0){
-					div.style.left = 0;
-				}else{
-					div.style.left = x - (div.width / 2);
+			console.log(x+$(".edit-container").width(),$("#video").width());
+			if (!(x < 100) && !(x-32+$(".edit-container").width() > $("#video").width())){
+				if(editMode==false){
+				$(".edit-container").css("left",x-100);
 				}
 			}
+
 
 			if(timeout){
 				clearTimeout(timeout);
@@ -183,7 +180,9 @@ var editStart;
 			if(settings.autoPlay){
 				video.pause(); //make sure the video doesn't continue downloading on mouse out.
 			}
+			if(editMode==false){
 			$(".edit-container").css("display","none");
+			}
 			hideInterval = setInterval(function(){
 				if(div.style.opacity <= 0){
 					div.style.display = "none";
@@ -195,6 +194,7 @@ var editStart;
 		}, false);
 		progressControl.el()[eventHandler]('click', function click(){
 			$("#edit-controls").css("display","block");
+			editMode=true;
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();
 			var w = boundingClientRect.width-162;
 			var x = event.clientX - boundingClientRect.left - 85;

@@ -4,7 +4,7 @@ myVideoPlayer.addEventListener('durationchange', function() {
     full_duration = myVideoPlayer.duration;
 });
 var editVideo = document.getElementById('edit-video-content')
-
+var editMode=false;
 var videos = {
         a: Popcorn("#edit-video-content"),
         b: Popcorn("#edit-video-camera"),

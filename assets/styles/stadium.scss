@@ -25,16 +25,19 @@
   top: 50px;
   display: block !important;
 }
+.edit-placeholder{
+  position: absolute;
+  bottom: 75px;
+}
 .edit-container{
   display: none;
-  width: 200px;
-  height: 230px;
+  width: 369px;
   position: absolute;
-  bottom: -160px;
-  padding: 0 10px;
+  top: 0px;
+  padding: 0 35px;
   .edit-video-wrapper{
     font-size: 0;
-    height: 140.6px;
+    height: 100.6px;
     position: relative;
   }
   video{
@@ -55,14 +58,14 @@
   margin-top: 8px;
   .edit-button{
     position: absolute;
-    width: 31px;
-    height: 31px;
+    width: 20px;
+    height: 20px;
   }
   #generate{
-    right: -41px;
+    right: -27px;
   }
   #cancel{
-    left: -41px;
+    left: -27px;
   }
   input{
     position: absolute;
