@@ -159,7 +159,6 @@ var editStart;
 			//var x = event.offsetX;
 			var percentX = x / w;
 			showThumb(div, loader);
-			console.log(x+$(".edit-container").width(),$("#video").width());
 			if (!(x < 100) && !(x-32+$(".edit-container").width() > $("#video").width())){
 				if(editMode==false){
 				$(".edit-container").css("left",x-100);
@@ -170,9 +169,11 @@ var editStart;
 			if(timeout){
 				clearTimeout(timeout);
 			}
+			if(editMode==false){
 			timeout = setTimeout(function(){
 				editVideo.currentTime = parseInt(full_duration * percentX);
 			}, 25);
+			}
 		}, false);
 
 
@@ -193,6 +194,7 @@ var editStart;
 			}, 10);
 		}, false);
 		progressControl.el()[eventHandler]('click', function click(){
+
 			$("#edit-controls").css("display","block");
 			editMode=true;
 			var boundingClientRect = mainPlayerVideo.getBoundingClientRect();

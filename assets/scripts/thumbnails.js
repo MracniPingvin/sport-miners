@@ -111,8 +111,8 @@ function make_gif(start, lenght, file){
          var image = obj.image,
              animatedImage = document.createElement('img');
          animatedImage.src = image;
-         animatedImage.className = "created-gif";
-         document.body.appendChild(animatedImage);
+         created_gif=animatedImage;
+         return animatedImage;
      }
  });
 }

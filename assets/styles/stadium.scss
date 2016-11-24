@@ -96,6 +96,7 @@
   height: 100%;
   position: absolute;
   width: 2px;
+  z-index: 5;
   background-color: red;
 }
 .clock-box{
@@ -222,9 +223,13 @@
   }
 }
 .chat-container{
+
   margin-top: 5px;
   border-radius: 4px;
+
   .chat-main{
+    max-height: 50vh;
+    overflow-y: scroll;
     position: relative;
     margin-bottom: 50px;
   }
@@ -255,6 +260,9 @@
     background-color: #393939;
     color: white;
     border-radius: 3px;
+    img{
+      width: 100%;
+    }
   }
 }
 .chat-input{
@@ -290,3 +298,13 @@
     color: #171616;
   }
 }
+body > video {
+  position: absolute;
+  display: none;
+  left: -9999px;
+}
+.chat-test{
+
+}
+
+

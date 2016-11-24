@@ -868,7 +868,6 @@ function closure ( target, options, originalOptions ){
 		if ( !add ) {
 			return false;
 		}
-		addNodeTo(base, options.cssClasses.test);
 		return addNodeTo(base, options.cssClasses.connect);
 	}
 
