@@ -1,0 +1,69 @@
+.choose-container{
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  li,p,h1,h1,td,a,caption,th,label{
+    color: white;
+  }
+  h1{
+    font-size: 14px;
+    text-align: center;
+  }
+  a{
+    text-align: center;
+  }
+  tr:hover, li:hover{
+    background-color: #393939;
+  }
+  tr:first-child:hover{
+    background-color: transparent;
+  }
+  th{
+    text-align: left;
+  }
+  td,th,a{
+    font-size: 12px;
+  }
+  table{
+    border-collapse: collapse;
+    img{
+      width: 20px;
+      height: 10px;
+      display: inline-block;
+    }
+  }
+  ul{
+    img{
+      width: 20px;
+      height: 10px;
+      display: inline-block;
+    }
+  }
+  li{
+    font-size: 10px;
+    list-style: none;
+  }
+  input{
+    background-color: #393939;
+    border-radius: 3px;
+  }
+}
+.sport-row {
+  width: 100%;
+  img{
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+  }
+}
+.match-row{
+  max-height: 70%;
+  & > div{
+    position: relative;
+  }
+  .scroll{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}

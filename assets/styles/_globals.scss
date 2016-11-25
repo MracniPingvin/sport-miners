@@ -34,3 +34,39 @@ input, textarea{
   width: 100%;
   height: 100%;
 }
+.container-grey{
+  background-color: rgba(35,35,35,0.6);
+}
+.logo-big{
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+}
+.scroll{
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 3px;
+    margin-right: 0.5px;
+    display: block;
+  }
+
+  &::-webkit-scrollbar-track {
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+}
+.scroll-line{
+  width: 0.5px;
+  margin-right: 0.5px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 16px;
+}

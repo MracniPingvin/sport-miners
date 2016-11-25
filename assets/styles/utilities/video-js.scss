@@ -544,7 +544,7 @@ body.vjs-full-window {
   bottom: 75px;
   left: 0;
   right: 0;
-  height: 3.0em;
+  height: 40px;
   }
 
 .vjs-has-started .vjs-control-bar {
@@ -597,8 +597,8 @@ body.vjs-full-window {
   -ms-flex: none;
   flex: none; }
   .video-js .vjs-control:before {
-    font-size: 1.8em;
-    line-height: 1.67; }
+    font-size: 30px;
+    line-height: 40px; }
 
 .video-js .vjs-control:focus:before,
 .video-js .vjs-control:hover:before,
@@ -1233,7 +1233,7 @@ video::-webkit-media-text-track-display {
   z-index: 1; }
 .vjs-volume-menu-button{
   position: absolute !important;
-  right: 48px;
+  right: 95px;
 }
 .vjs-remaining-time{
   display: none;
@@ -1242,5 +1242,5 @@ video::-webkit-media-text-track-display {
   padding: 0 20px;
 }
 .vjs-fullscreen-control{
-  margin-left: 27px !important;
+  margin-left: 75px !important;
 }
