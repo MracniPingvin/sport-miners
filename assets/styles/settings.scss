@@ -1,33 +1,96 @@
 
 .settings-stadium{
   p{
-    margin-top: 35px;
+    margin-top: 25px;
     text-align: center;
     margin-bottom: 5px;
   }
   a{
-    display: block;
+    display: inline-block;
     text-align: center;
+  }
+  .more-options{
+    height: 30px;
+    padding: 0 50px;
+    a:first-child{
+      float: left;
+    }
+    a:last-child{
+      float: right;
+    }
   }
   .slider{
     width: 140px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     input{
       width: 140px;
     }
   }
+  .col-xs-6{
+    margin-top: 20px;
+  }
 }
 .settings-menu{
-  display: none;
-  padding: 40px;
+  display: block;
+  padding: 15px 30px;
   height: 100%;
 }
 .settings-your{
-  label{
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 10px;
+  .friend-wrapper{
+    margin-bottom: 15px;
+    position: relative;
+    &:hover{
+      .flex{
+        display: flex;
+      }
+    }
+    .flex{
+      display: none;
+      margin-left: 50px;
+      height: 100%;
+      align-items: center;
+      background-color: rgba(255,255,255,0.6);
+      border-radius: 5px;
+    }
+    .friend-button{
+      display: inline-block;
+      height: 17px;
+      background-color: black;
+      border: solid 1px white;
+      color: white;
+      border-radius: 100px;
+      padding: 1px 6px;
+      font-size: 12px;
+    }
   }
-  .row:last-child{
-  padding: 0 25px;}
+  .friend-wrapper:first-child{
+    margin-top: 30px;
+  }
+  .stadium-profile{
+    width: 44px;
+    height: 44px;
+    padding: 2px;
+    position: absolute;
+  }
+  p{
+    text-align: left;
+    margin-left: 50px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  b{
+    line-height: 19px;
+  }
+  em{
+    font-size: 10px;
+  }
+}
+.sport-row{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
+
+  img{
+    margin: 5px;
+  }
 }

@@ -9,7 +9,7 @@ function send(content){
         newMess = false;
     }else{
         newMess =true;
-        if(content.friendly){
+        if(content.friendly==0){
             $(".chat-main").append(
                 '<div class="chat-wrapper stadium-friendly">' +
                 '<div class="stadium-profile">' +
@@ -20,9 +20,20 @@ function send(content){
                 '</div>' +
                 '</div>'
             );
-        }else{
+        }else if(content.friendly==1){
             $(".chat-main").append(
                 '<div class="chat-wrapper stadium-opposing">' +
+                '<div class="stadium-profile">' +
+                '<img src="'+ content.profile + '" class="full-span">' +
+                '</div>' +
+                '<div class="message-name">' +
+                content.name +
+                '</div>' +
+                '</div>'
+            );
+        }else{
+            $(".chat-main").append(
+                '<div class="chat-wrapper stadium-self">' +
                 '<div class="stadium-profile">' +
                 '<img src="'+ content.profile + '" class="full-span">' +
                 '</div>' +
@@ -51,35 +62,39 @@ function getLast() {
 }
 $(document).ready(function () {
     var sendContent={
-        name: "boža",
+        name: "božo",
         text: "asdfsadfasdfads faw fadf awwf awfw efawf awef wef awfawef awdf waef ",
         gif: false,
         profile: "",
-        friendly: true,
+        friendly: 0,
     };
     send(sendContent);
-    sendContent={
-        name: "jobo",
-        text: "asdfsadfasasdsd awfw efawf awef wesddsdswfawef awdf waef ",
-        gif: false,
-        profile: "",
-        friendly: false,
-    };
-    send(sendContent);
-    send(sendContent);
-    send(sendContent);
-    send(sendContent);
-    send(sendContent);
-    send(sendContent);
-    send(sendContent);
-});
-function test() {
     var sendContent={
         name: "boža",
         text: "asdfsadfasdfads faw fadf awwf awfw efawf awef wef awfawef awdf waef ",
         gif: false,
         profile: "",
-        friendly: true,
+        friendly: 1,
+    };
+    send(sendContent);
+    var sendContent={
+        name: "jst",
+        text: "asdfsadfasdfads faw fadf awwf awfw efawf awef wef awfawef awdf waef ",
+        gif: false,
+        profile: "",
+        friendly: 2,
+    };
+    send(sendContent);
+    send(sendContent);
+});
+
+function test() {
+    var sendContent={
+        name: "bojan",
+        text: "asdfsadfasdfads faw fadf awwf awfw efawf awef wef awfawef awdf waef ",
+        gif: false,
+        profile: "",
+        friendly: 2,
     };
     send(sendContent);
 }

@@ -8,50 +8,561 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
-<img class="logo-big">
-<div class="container-centered container-grey">
-    <h1>Choose stadium...</h1>
-    <p class="grey">Or create yours and invite friends</p>
-    <div class="divide-line"></div>
-    <h2>Fliters</h2>
-    <ul class="inline">
-        <li>rough</li>
-        <li>menonly</li>
-        <li>womenonly</li>
-        <li>soft</li>
-        <li>crazy</li>
-        <li>ronaldofans</li>
-        <li>messifans</li>
-        <li>rough</li>
-        <li>menonly</li>
-        <li>womenonly</li>
-        <li>soft</li>
-        <li>crazy</li>
-        <li>ronaldofans</li>
-        <li>messifans</li>
-        <li>rough</li>
-        <li>menonly</li>
-        <li>womenonly</li>
-        <li>soft</li>
-        <li>crazy</li>
-        <li>ronaldofans</li>
-        <li>messifans</li>
-    </ul>
-    <div class="divide-line"></div>
+<div class="flex flex--row flex--justify-center flex--align-vertical main-logo">
+    <img src="images/logo_login.png">
+    <h1>Virtual Stadium</h1>
+</div>
+<div class="profile-wrapper flex flex--row flex--justify-center flex--align-vertical">
+    <h1>Peter High</h1>
+    <img src="images/profile_logout.png">
+</div>
+<div class="container-centered container-grey stadium-select-container">
+    <h1 class="team">Choose your team...</h1>
+    <div class="flex flex--row flex--justify-center flex--align-vertical">
+        <div class="team-wrapper">
+            <img src="images/barcelona.png">
+            <div>FC Barcelona</div>
+        </div>
+        <img src="images/logo_login.png" class="vs-logo">
+        <div class="team-wrapper">
+            <img src="images/real.png">
+            <div>Real Madrid</div>
+        </div>
+    </div>
+    <h1 class="stadium">Chose your stadium...</h1>
+    <p>Language: SLO</p>
+    <div class="row"><div class="slider respect-rough"><input type="range"></div></div>
+    <div class="row"><div class="slider casual-expert"><input type="range"></div></div>
+    <div class="row"><div class="random-button"><a class="nomargin full-span" href="stadium.html"></a>JOIN RANDOM</div></div>
     <div class="row">
-        <div class="col-xs-4">
-            <div class="flex--row flex--centered">
-                <div class="stadium-tile"></div>
+        <div class="col-xs-2">
+            <div class="stadium-mini">
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-opposing">
+                    <div class="background"></div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-friendly">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <div class="profile-ok">&#10003;</div>
+                        <div class="profile-kick">&times;</div>
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter-container">
+                    <label class="language">LANGUAGE:<b>SLO</b></label>
+                    <label>GIF ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>CHAT ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>FAN'S FIT</label>
+                    <div class="slider"><input type="range"></div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4"></div>
+        <div class="col-xs-2">
+            <div class="stadium-mini">
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-opposing">
+                    <div class="background"></div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-friendly">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <div class="profile-ok">&#10003;</div>
+                        <div class="profile-kick">&times;</div>
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter-container">
+                    <label class="language">LANGUAGE:<b>SLO</b></label>
+                    <label>GIF ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>CHAT ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>FAN'S FIT</label>
+                    <div class="slider"><input type="range"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="stadium-mini">
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-opposing">
+                    <div class="background"></div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-friendly">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <div class="profile-ok">&#10003;</div>
+                        <div class="profile-kick">&times;</div>
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter-container">
+                    <label class="language">LANGUAGE:<b>SLO</b></label>
+                    <label>GIF ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>CHAT ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>FAN'S FIT</label>
+                    <div class="slider"><input type="range"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="stadium-mini">
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-opposing">
+                    <div class="background"></div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper stadium-friendly">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="stadium-profile">
+                        <div class="profile-ok">&#10003;</div>
+                        <div class="profile-kick">&times;</div>
+                        <img src="images/sample-profile.png" class="full-span">
+                        <div class="online-status"></div>
+                        <div class="profile-stats">
+                            <p>Messifan</p>
+                            <p>SLO, Ljubljana</p>
+                            <p>post/min: <span class="post-min">5</span></p>
+                            <p>GIF/min: <span class="post-min">1</span></p>
+                            <p>fan fit: <span class="post-min">62</span></p>
+                            <div class="flex flex--row flex--justify-center">
+                                <img src="images/add-friend.png">
+                                <img src="images/like.png">
+                                <img src="images/add-friend.png">
+                                <div class="profile-kick">&times;</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter-container">
+                    <label class="language">LANGUAGE:<b>SLO</b></label>
+                    <label>GIF ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>CHAT ACTIVITY</label>
+                    <div class="slider"><input type="range"></div>
+                    <label>FAN'S FIT</label>
+                    <div class="slider"><input type="range"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div>
+            <div class="stadium-mini create-new">
+                <div class="background"><div class="plus">+</div></div>
+                <div class="parameter-container">
+                    <p>LANGUAGE: SLO</p>
+                    <div class="row"><div class="slider respect-rough"><input type="range"></div></div>
+                    <div class="row"><div class="slider casual-expert"><input type="range"></div></div>
+                    <div class="row"><div class="random-button">CREATE NEW</div></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <a>More stadiums</a>
     </div>
-    <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4"></div>
-    </div>
+
 </div>
 </body>
 </html>

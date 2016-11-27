@@ -7,6 +7,7 @@ html, body{
 
 }
 body{
+  padding-top: 34px !important;
   background-image: url("../images/background.jpg");
   background-position: center;
   background-size: cover;
@@ -72,7 +73,7 @@ input, textarea{
 .scroll-line{
   width: 1px;
   height: calc(100% - 60px);
-  background-color: white;
+  background-color: #939393;
   position: absolute;
   right: 16px;
   top: 60px;
@@ -130,6 +131,8 @@ li{
   &:before, &:after{
     position: absolute;
     top: 0;
+    font-size: 12px;
+    font-weight: bold;
   }
   &:before{
     left: 111%;
@@ -152,5 +155,40 @@ li{
   }
   &:after{
     content: "casual";
+  }
+}
+.main-logo{
+  margin-bottom: 25px;
+  height: 42px;
+  h1{
+    font-size: 22.5px;
+  }
+  img{
+    margin-right: 5px;
+    height: 100%;
+    width: auto;
+  }
+}
+.nomargin{
+  position: absolute;
+  margin: 0 !important;
+  text-decoration: none !important;
+  text-align: inherit !important;
+
+}
+.profile-wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 160px;
+  height: 100px;
+  h1{
+    font-size: 15.1px;
+    font-weight: normal;
+    margin-right: 12px;
+  }
+  img{
+    width: 31.4px;
+    height: 31.4px;
   }
 }
