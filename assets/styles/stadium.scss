@@ -6,14 +6,16 @@
   height: 100%;
 }
 .stream-container{
-  width: 75vw;
+  padding: 0;
+  width: 74.1%;
   position: relative;
-  padding: 0 10px 0 20px;
+  height: 100%;
   #video{
     @extend .full-span;
   }
 }
 .full-wrapper{
+  height: 0;
   @extend .full-span;
   position: relative;
   padding-top: 56.25%;
@@ -34,6 +36,7 @@
   width: 650px;
   position: absolute;
   top: 0px;
+  z-index: 2;
   padding: 15px 57px;
   .edit-video-wrapper{
     font-size: 0;
@@ -110,15 +113,18 @@
   line-height: 32px;
 }
 .side-container{
-  position: fixed;
-  width: calc(25vw - 20px);
-  margin-right: 20px;
-  right: 0;
-  top: 0;
+  position: relative;
+  height: 100%;
+  padding-right: 0;
+  .container-grey{
+    background-color: #292929;
+  }
 }
 .stadium-container, .chat-container{
+  height: 32%;
   padding: 18px 18px 18px 18px;
   font-size: 16px;
+  position: relative;
   .row{
     margin: 0;
   }
@@ -128,36 +134,67 @@
   padding: 0;
 }
 .stadium-opposing{
-  text-align: right;
-  .stadium-profile, .progress-bar{
+  text-align: left;
+  .arrow{
+    border-left:10px solid #cbcbcb;
+    right:-5px;
+
+  }
+  .profile-stats {
+    right: 63px;
+  }
+  .team-text{
+    padding-left: 30px;
+  }
+  .stadium-profile{
     background-color: #b50a27;
   }
   .progress-wrap{
-    margin-right:33px;
+    margin-right:27px;
   }
   .online-status{
     right: -1px;
   }
 }
 .stadium-friendly{
-  text-align: left;
-  .stadium-profile, .progress-bar{
+  text-align: right;
+  .arrow{
+    border-right:10px solid #cbcbcb;
+    left:-5px;
+
+  }
+  .profile-stats {
+    left: 63px;
+  }
+  .team-text{
+    padding-right: 30px;
+  }
+  .stadium-profile{
     background-color: #3e6425;
   }
+  .stadium-profile:first-child{
+    background-color: white;
+  }
   .progress-wrap{
-    margin-left:33px ;
+    margin-left:27px ;
   }
   .online-status{
     left: -1px;
   }
 }
 .stadium-profile{
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   padding: 3px;
-  margin: 5px 0;
-  border-radius: 2px;
+  margin: 3px 0;
+  border-radius: 3px;
   position: relative;
+  box-shadow: 2.5px 4.3px 6px 0 rgba(0, 0, 0, 0.3);
+  &:hover{
+    .profile-stats{
+      display: block;
+    }
+  }
   .online-status{
     width: 10px;
     height: 10px;
@@ -180,9 +217,17 @@
 }
 .vs-bar{
   padding-bottom: 2px !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 32px !important;
+  img{
+  }
+  &.row{
+    margin-left: 13%;
+    margin-right: 13%;
+  }
   div{
     position: relative;
+    text-shadow: 2px 3.5px 0 rgba(0, 0, 0, 0.75);
+    font-size: 15.7px;
   }
   .vs-text{
     color: white;
@@ -195,20 +240,25 @@
   }
 }
 .top-bar{
-  border-bottom: solid 0.8px #f4f4f2;
-  padding-bottom: 10px;
+  border-bottom: solid 0.7px #939393;
+  padding-bottom: 9px;
   margin-bottom: 0px;
 }
 .progress {
   height: 100%;
-  width: 65px;
 }
 .progress-wrap {
-  overflow: hidden;
+  overflow-y: hidden;
   position: relative;
-  border-radius: 2px;
+  border-radius: 5px;
+  width: 70px;
+  box-shadow: 0px 4.3px 5px -3px rgba(0, 0, 0, 0.5);
   .progress-bar {
-    border-radius: 2px;
+    width: 65px;
+
+    box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: rgba(72, 72, 72,0.7);
     left: 0;
     position: absolute;
     top: 0;
@@ -223,13 +273,13 @@
   }
 }
 .chat-container{
-
+  height: 67%;
   margin-top: 5px;
   border-radius: 4px;
 
   .chat-main{
     padding-top: 20px;
-    max-height: 50vh;
+    max-height: 76%;
     overflow-y: scroll;
     position: relative;
     margin-bottom: 100px;
@@ -246,6 +296,7 @@
     bottom: 0;
     left: 0;
     margin-bottom: 3px;
+
   }
   .message-name, .message-content{
     margin-left: 46px;
@@ -311,5 +362,87 @@ body > video {
 .chat-test{
 
 }
+.entire-container{
 
+  height: 392px;
+  height: 784px;
 
+  width: 754px;
+  width: 1508px;
+  margin: 0 auto;
+  & > .row{
+    height:100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+.banner-wrapper{
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 17%;
+  background-color: red;
+  z-index: 0;
+}
+.chat-menu{
+  height: 100%;
+}
+.profile-ok,.profile-kick{
+  display: none;
+  width: 20px;
+  height: 20px;
+  line-height: 22px;
+  border: solid 1px white;
+  position: absolute;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  text-align: center;
+  border-radius: 100px;
+}
+.profile-ok{
+  background-color: #4b8027;
+  left: 5px;
+}
+.profile-kick{
+  background-color: red;
+  right: 5px;
+  line-height: 17px;
+}
+.profile-stats{
+  display: none;
+  padding: 9px 11px 9px 11px;
+  position: absolute;
+  min-width: 85px;
+  background-color: #cbcbcb;
+  box-shadow: 4px 6.9px 10px 0 rgba(0, 0, 0, 0.41);
+  border-radius: 5px;
+  z-index: 7;
+  text-align: left;
+  top: -20px;
+  p{
+    font-size: 12px;
+    color: black;
+    white-space: nowrap;
+  }
+  img{
+    display: inline-block;
+    width: 18px;
+  }
+  span, p:first-child{
+    font-weight: bold;
+  }
+  p:nth-child(2){
+    margin-bottom: 5px;
+  }
+}
+.arrow{
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 38px;
+  width: 0;
+  height: 0;
+  transform: scaleX(2);
+  position: absolute;
+}

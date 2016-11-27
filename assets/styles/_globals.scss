@@ -11,6 +11,12 @@ body{
   background-position: center;
   background-size: cover;
 }
+p{
+  margin: 0;
+}
+a{
+  text-decoration: underline;
+}
 input, textarea{
   background-color: transparent;
   border: 0;
@@ -35,7 +41,9 @@ input, textarea{
   height: 100%;
 }
 .container-grey{
-  background-color: rgba(35,35,35,0.6);
+  background-color: rgba(37,37,37,0.6);
+  box-shadow: 2.5px 4.3px 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
 }
 .logo-big{
   height: 50px;
@@ -48,7 +56,6 @@ input, textarea{
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 3px;
-    margin-right: 0.5px;
     display: block;
   }
 
@@ -63,10 +70,87 @@ input, textarea{
   }
 }
 .scroll-line{
-  width: 0.5px;
-  margin-right: 0.5px;
-  height: 100%;
+  width: 1px;
+  height: calc(100% - 60px);
   background-color: white;
   position: absolute;
   right: 16px;
+  top: 60px;
+}
+ul{
+  padding-left: 0;
+  margin-top: 0px;
+  line-height: 23px;
+  margin-bottom: 15px;
+  img{
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+  }
+}
+li{
+  font-size: 10px;
+  list-style: none;
+}
+.slider{
+  margin: 0 auto;
+  position: relative;
+  text-transform: uppercase;
+  height: 20px;
+  line-height: 20px;
+  input[type=range]{
+    -webkit-appearance: none;
+    height: 10px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 1px;
+    background: rgb(147,147,147);
+    border: none;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 6px;
+    width: 9px;
+    background: white;
+    margin-top: -3px;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+
+  }
+  &:before, &:after{
+    position: absolute;
+    top: 0;
+  }
+  &:before{
+    left: 111%;
+  }
+  &:after{
+    right: 111%;
+  }
+}
+.respect-rough{
+   &:before{
+     content: "rough";
+   }
+   &:after{
+     content: "respect";
+   }
+}
+.casual-expert{
+  &:before{
+    content: "expert";
+  }
+  &:after{
+    content: "casual";
+  }
 }

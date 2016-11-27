@@ -8,134 +8,291 @@
 </head>
 <body>
 <img class="logo-big">
-<div class="stream-container">
-    <div class="full-wrapper">
-        <video id="video" class="video-js vjs-default-skin"
-               controls preload="auto" width="640" height="264"
-               autoplay="true" muted="true">
-            <source src="images/sample-video.mp4">
-        </video>
-        <div class="edit-placeholder">
-            <div class="edit-container grey-bg" id="edit-container">
-                <div class="edit-video-wrapper">
-                    <video id="edit-video-content" muted>
-                        <source src="images/sample-video.mp4">
-                    </video>
-                    <video id="edit-video-camera" muted>
-                        <source src="images/sample-camera.mp4">
-                    </video>
-                </div>
-                <div id='edit-controls'>
-                    <div id="slider">
-                        <div id="generate" class="edit-button v-center" >
-                            <img src="images/generate.png" >
+<div class="entire-container">
+    <div class="row">
+        <div class="col-xs-9 stream-container">
+            <div class="full-wrapper">
+                <video id="video" class="video-js vjs-default-skin"
+                       controls preload="auto" width="640" height="264"
+                       autoplay="true" muted="true">
+                    <source src="images/sample-video.mp4">
+                </video>
+                <div class="edit-placeholder">
+                    <div class="edit-container grey-bg" id="edit-container">
+                        <div class="edit-video-wrapper">
+                            <video id="edit-video-content" muted>
+                                <source src="images/sample-video.mp4">
+                            </video>
+                            <video id="edit-video-camera" muted>
+                                <source src="images/sample-camera.mp4">
+                            </video>
                         </div>
-                        <div id="cancel" class="edit-button v-center">
-                            <img src="images/cancel.png">
+                        <div id='edit-controls'>
+                            <div id="slider">
+                                <div id="generate" class="edit-button v-center" >
+                                    <img src="images/generate.png" >
+                                </div>
+                                <div id="cancel" class="edit-button v-center">
+                                    <img src="images/cancel.png">
+                                </div>
+                            </div>
+                            <div class="clock-box">
+                                00:00
+                            </div>
                         </div>
                     </div>
-                    <div class="clock-box">
-                        00:00
+                </div>
+            </div>
+            <div class="banner-wrapper">
+            </div>
+        </div>
+<div class="side-container col-xs-3">
+    <div class="chat-menu">
+        <div class="stadium-container container-grey">
+            <div class="row vs-bar top-bar">
+                <img src="images/barcelona.png" style="width: 51px; position: absolute; top: 9px; left: 5px">
+                <img src="images/real.png" style="width: 37px; position: absolute; top: 9px; right: 10px">
+                <div class="col-xs-6 stadium-friendly">
+                    <div class="team-text">FC Barcelona</div>
+
+                    <div class="vs-text">2:3</div>
+                </div>
+                <div class="col-xs-6 stadium-opposing">
+                    <div class="team-text">Real Madrid</div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 flex flex--row flex--justify-left stadium-friendly">
+                    <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper">
+                        <div class="stadium-profile">
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="stadium-profile">
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="stadium-profile">
+                            <div class="profile-ok">&#10003;</div>
+                            <div class="profile-kick">&times;</div>
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="progress-wrap progress progress-bar1" data-progress-percent="25">
+                        <img src="images/barcelona.png" style="width: 39px; position: absolute; bottom: 9px; left:0; right:0;margin: 0 auto; z-index: 2;">
+                        <div class="progress-bar progress">
+                            <div class="progress-count">10.000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 flex flex--row-reverse flex--justify-left stadium-opposing">
+                    <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper">
+                        <div class="stadium-profile">
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="stadium-profile">
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="stadium-profile">
+                            <img src="images/sample-profile.png" class="full-span">
+                            <div class="online-status"></div>
+                            <div class="profile-stats">
+                                <p>Messifan</p>
+                                <p>SLO, Ljubljana</p>
+                                <p>post/min: <span class="post-min">5</span></p>
+                                <p>GIF/min: <span class="post-min">1</span></p>
+                                <p>fan fit: <span class="post-min">62</span></p>
+                                <div class="flex flex--row flex--justify-center">
+                                    <img src="images/add-friend.png">
+                                    <img src="images/like.png">
+                                    <img src="images/add-friend.png">
+                                    <div class="profile-kick">&times;</div>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap progress" data-progress-percent="25">
+                        <img src="images/real.png" style="width: 35px; position: absolute; bottom: 9px; left:0; right:0;margin: 0 auto; z-index: 2;">
+                        <div class="progress-bar progress progress-bar2">
+                            <div class="progress-count">13.000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-test"></div>
+        </div>
+        <div class="chat-container container-grey">
+            <div class="row top-bar chat-head">
+                <div class="chat-button active">CHAT</div>
+                <div class="chat-button inactive">STATISTICS</div>
+            </div>
+            <div class="chat-main">
+                <div class="chat-wrapper stadium-friendly">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                    </div>
+                    <div class="message-name">Maya</div>
+                    <div class="message-content">Ronaldo bla bla bla bla bla bla bla bla bla bla bla bla</div>
+                    <div class="message-content">Messi bla bla bla bla bla bla bla bla bla bla bla bla</div>
+                </div>
+                <div class="chat-wrapper stadium-opposing">
+                    <div class="stadium-profile">
+                        <img src="images/sample-profile.png" class="full-span">
+                    </div>
+                    <div class="message-name">Jože</div>
+                    <div class="message-content">Ronaldo bla bla bla bla bla bla bla bla bla bla bla bla</div>
+                    <div class="message-content">Messi bla bla bla bla bla bla bla bla bla bla bla bla</div>
+                    <div class="message-content">pedr</div>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <div class="wrapper">
+                    <textarea placeholder="Type your message."></textarea>
+                    <div class="submit" ></div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="settings-menu container-grey">
+        <div class="settings-stadium">
+            <div class="row top-bar chat-head">
+                <div class="chat-button active">STADIUMS</div>
+                <div class="chat-button inactive">LOG OUT</div>
+            </div>
+            <p>Language: SLO</p>
+            <div class="row"><div class="slider respect-rough"><input type="range"></div></div>
+            <div class="row"><div class="slider casual-expert"><input type="range"></div></div>
+            <a>More stadiums</a>
+        </div>
+        <div class="settings-sport">
+            <div class="row top-bar chat-head">
+                <div class="chat-button active">CHANGE SPORT</div>
+            </div>
+            <div class="row">
+                <div class="flex flex--row flex--centered flex--justify-center sport-row">
+                    <img src="sport1.jpg">
+                    <img src="sport2.jpg">
+                    <img src="sport3.jpg">
+                    <img src="sport4.jpg">
+                    <img src="sport5.jpg">
+                    <img src="sport6.jpg">
+                    <img src="sport7.jpg">
+                    <img src="sport8.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="settings-your">
+            <div class="row top-bar chat-head">
+                <div class="chat-button active">SETTINGS</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <label>Your leagues:</label>
+                    <ul>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <label>Your teams:</label>
+                    <ul>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                        <li><img src="images/spain.jpg">La liga</li>
+                    </ul>
 
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="side-container">
-    <div class="stadium-container grey-bg">
-        <div class="row vs-bar top-bar">
-            <div class="col-xs-6 stadium-friendly">
-                REAL MADRID
-                <div class="vs-text">2:3</div>
-            </div>
-            <div class="col-xs-6 stadium-opposing">
-                FC BARCELONA
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 flex flex--row flex--justify-left stadium-friendly">
-                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper">
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                </div>
-                <div class="progress-wrap progress progress-bar1" data-progress-percent="25">
-
-                    <div class="progress-bar progress">
-                        <div class="progress-count">10.000</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 flex flex--row-reverse flex--justify-left stadium-opposing">
-                <div class="flex flex--column flex--justify-space-between stadium-profile-wrapper">
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                    <div class="stadium-profile">
-                        <img src="images/sample-profile.png" class="full-span">
-                        <div class="online-status"></div>
-                    </div>
-                </div>
-                <div class="progress-wrap progress" data-progress-percent="75">
-
-                    <div class="progress-bar progress progress-bar2">
-                        <div class="progress-count">13.000</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="chat-test"></div>
-    </div>
-    <div class="chat-container grey-bg">
-        <div class="row top-bar chat-head">
-            <div class="chat-button active">CHAT</div>
-            <div class="chat-button inactive">STATISTICS</div>
-        </div>
-        <div class="chat-main">
-            <div class="chat-wrapper stadium-friendly">
-                <div class="stadium-profile">
-                    <img src="images/sample-profile.png" class="full-span">
-                </div>
-                <div class="message-name">Maya</div>
-                <div class="message-content">Ronaldo bla bla bla bla bla bla bla bla bla bla bla bla</div>
-                <div class="message-content">Messi bla bla bla bla bla bla bla bla bla bla bla bla</div>
-            </div>
-            <div class="chat-wrapper stadium-opposing">
-                <div class="stadium-profile">
-                    <img src="images/sample-profile.png" class="full-span">
-                </div>
-                <div class="message-name">Jože</div>
-                <div class="message-content">Ronaldo bla bla bla bla bla bla bla bla bla bla bla bla</div>
-                <div class="message-content">Messi bla bla bla bla bla bla bla bla bla bla bla bla</div>
-                <div class="message-content">pedr</div>
-            </div>
-        </div>
-
-        <div class="chat-input">
-            <div class="wrapper">
-                <textarea placeholder="Type your message."></textarea>
-                <div class="submit" ></div>
-            </div>
-        </div>
     </div>
 </div>
-
 
 <script src="scripts/main.js"></script>
 <script>

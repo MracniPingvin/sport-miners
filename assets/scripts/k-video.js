@@ -13023,7 +13023,7 @@ var Slider = (function (_Component) {
     }
 
     // Convert to a percentage for setting
-    var percentage = (progress * 100).toFixed(2) + '%';
+    var percentage = (100).toFixed(2) + '%';
 
     // Set the new bar width or height
     if (this.vertical()) {
